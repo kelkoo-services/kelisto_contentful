@@ -33,7 +33,7 @@ module KelistoContentful
       self.instance_eval do
         normalized_method_name = content_type.name.downcase.gsub(/\s|-/,'_')
         define_singleton_method(normalized_method_name) {
-          KelistoContentful::ContentType.new(client, content_type.id)
+          KelistoContentful::ContentType.new(content_type.id)
         }
       end
     end

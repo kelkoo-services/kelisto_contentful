@@ -1,6 +1,3 @@
 module KelistoContentful
-  if Rails.defined?
-    class Engine < ::Rails::Engine
-    end
-  end
+  class Engine < ::Rails::Engine; end if defined?(Rails)
 end
